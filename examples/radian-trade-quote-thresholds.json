@@ -1,0 +1,17 @@
+{
+  "repo": "radian-trade-quote-pipe",
+  "thresholds": {
+    "signal": 3,
+    "slack": 2,
+    "confidence": 2,
+    "drag": 2,
+    "ship": 158,
+    "watch": 98
+  },
+  "terms": [
+    "spread pressure",
+    "fill risk",
+    "portfolio drift",
+    "quote width"
+  ]
+}

@@ -61,3 +61,9 @@ foreach ($pathPattern in $knownPaths) {
 zig test src/main.zig
 
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-radian-trade-quote-detail.ps1
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-radian-trade-quote-properties.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/check-radian-trade-quote-golden.ps1
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
